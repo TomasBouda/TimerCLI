@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <ApplicationIcon>timer.ico</ApplicationIcon>
+        <AssemblyName>timer</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>

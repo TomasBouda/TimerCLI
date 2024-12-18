@@ -27,11 +27,24 @@ Parser.Default.ParseArguments<Options>(args)
             if (time <= TimeSpan.Zero)
             {
                 timer.Stop();
-                Console.Beep();
-                Console.Beep();
-                Console.Beep();
                 
-                resetEvent.Set();
+                if (o.Exit)
+                {
+                    Console.Beep();
+                    Console.Beep();
+                    Console.Beep();
+                    resetEvent.Set();
+                }
+                else
+                {
+                    while (true)
+                    {
+                        Console.Beep();
+                        Console.Beep();
+                        Console.Beep();
+                        Thread.Sleep(TimeSpan.FromSeconds(1));
+                    }
+                }
             }
         };
         

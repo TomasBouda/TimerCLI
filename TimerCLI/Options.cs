@@ -11,6 +11,9 @@ public class Options
     [Option('s', "seconds", Required = false, HelpText = "Seconds to wait")]
     public int Seconds { get; set; }
     
+    [Option("exit", Required = false, HelpText = "Application will exit after timer ends")]
+    public bool Exit { get; set; }
+    
     [Option("tea", Required = false, HelpText = "Tea mode. Sets timer to 3 minutes")]
     public bool Tea { get; set; }
 }
